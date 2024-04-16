@@ -510,6 +510,7 @@ jobs:
         if: always() && (steps.test_report.outcome == 'success')
         uses: codecov/codecov-action@v4
         with:
+          disable_search: true
           fail_ci_if_error: true
           files: ./build/coverage.xml
           flags: ${{ runner.os }}
@@ -835,6 +836,7 @@ jobs:
         if: always() && (steps.test_report.outcome == 'success')
         uses: codecov/codecov-action@v4
         with:
+          disable_search: true
           fail_ci_if_error: false  # todo: re-enable this when action is fixed
           files: ./build/coverage.xml
           flags: ${{ runner.os }}-${{ matrix.os_version }}
@@ -1073,6 +1075,7 @@ jobs:
         if: always() && (steps.test_report.outcome == 'success')
         uses: codecov/codecov-action@v4
         with:
+          disable_search: true
           fail_ci_if_error: true
           files: ./build/coverage.xml
           flags: ${{ runner.os }}
